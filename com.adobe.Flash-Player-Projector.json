@@ -8,6 +8,8 @@
     "finish-args" : [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
+        /* GPU acceleration */
+        "--device=dri",
         /* Play sounds */
         "--socket=pulseaudio",
         /* Get access to the files */
