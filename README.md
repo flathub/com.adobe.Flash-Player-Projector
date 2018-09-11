@@ -2,7 +2,7 @@
 
 The upstream versions of the Flash Player are on [this page](https://www.adobe.com/support/flashplayer/debug_downloads.html).
 
-You can use pagemon.net to monitor this page the above page for new versions of the player [via RSS](https://pagemon.net/feed/4521689552382750447/).
+You can use release-monitoring.org to monitor this page the above page for new versions of the player [via fedmsg](https://release-monitoring.org/project/17854/).
 
 ## About network access
 
