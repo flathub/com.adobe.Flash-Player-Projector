@@ -7,7 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <!-- license linked from https://www.adobe.com/legal/licenses-terms.html -->
   <project_license>LicenseRef-proprietary=https://wwwimages2.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_30_0.pdf</project_license>
-  <launchable type="desktop-id">com.adobe.Flash-Player-Projector.desktop/</launchable>
+  <launchable type="desktop-id">com.adobe.Flash-Player-Projector.desktop</launchable>
   <content_rating type="oars-1.1"/>
   <description>
     <p>
