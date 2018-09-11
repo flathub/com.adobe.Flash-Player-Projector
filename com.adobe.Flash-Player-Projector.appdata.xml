@@ -38,6 +38,7 @@
   </screenshots>
   <updatecontact>hadess@hadess.net</updatecontact>
   <releases>
+    <release date="2018-09-11" version="31.0.0.108"/>
     <release date="2018-08-14" version="30.0.0.154"/>
   </releases>
 </component>
