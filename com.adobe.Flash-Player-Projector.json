@@ -22,6 +22,7 @@
             "name" : "flashplayer",
             "buildsystem" : "simple",
             "build-commands" : [
+                "make install",
                 "install -D -t /app/bin/ apply_extra",
                 "install flashplayer /app/bin",
                 "install -Dm644 64x64_com.adobe.Flash-Player-Projector.png /app/share/icons/hicolor/64x64/apps/com.adobe.Flash-Player-Projector.png",
@@ -36,7 +37,7 @@
                     "type" : "script",
                     "dest-filename" : "flashplayer",
                     "commands": [
-                       "exec /app/extra/flashplayer \"$@\""
+                       "LD_PRELOAD=/app/lib/libfix-config-location.so exec /app/extra/flashplayer \"$@\""
                     ]
                 },
                 {
@@ -46,6 +47,18 @@
                        "tar xzf flash_player_sa_linux.x86_64.tar.gz",
                        "rm -f flash_player_sa_linux.x86_64.tar.gz"
                    ]
+                },
+                {
+                   "type" : "file",
+                   "path" : "Makefile"
+                },
+                {
+                   "type" : "file",
+                   "path" : "fix-config-location.c"
+                },
+                {
+                   "type" : "file",
+                   "path" : "directories.h"
                 },
                 {
                     "type" : "extra-data",
