@@ -42,8 +42,7 @@
                    "type" : "script",
                    "dest-filename": "apply_extra",
                    "commands": [
-                       "echo Linked from https://www.adobe.com/support/flashplayer/debug_downloads.html",
-                       "tar xvzf flash_player_sa_linux.x86_64.tar.gz",
+                       "tar xzf flash_player_sa_linux.x86_64.tar.gz",
                        "rm -f flash_player_sa_linux.x86_64.tar.gz"
                    ]
                 },
