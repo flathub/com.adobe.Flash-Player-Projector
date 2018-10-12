@@ -1,8 +1,8 @@
 {
     "app-id" : "com.adobe.Flash-Player-Projector",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.30",
-    "sdk" : "org.gnome.Sdk",
+    "runtime" : "org.freedesktop.Platform",
+    "runtime-version" : "1.6",
+    "sdk" : "org.freedesktop.Sdk",
     "command" : "flashplayer",
     "tags": ["proprietary"],
     "finish-args" : [
