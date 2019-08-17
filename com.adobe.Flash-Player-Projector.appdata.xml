@@ -38,6 +38,7 @@
   </screenshots>
   <update_contact>hadess@hadess.net</update_contact>
   <releases>
+    <release date="2019-07-29" version="32.0.0.238"/>
     <release date="2019-06-22" version="32.0.0.223"/>
     <release date="2019-05-27" version="32.0.0.207"/>
     <release date="2019-05-14" version="32.0.0.192"/>
