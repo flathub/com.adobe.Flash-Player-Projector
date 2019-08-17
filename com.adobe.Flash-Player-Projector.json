@@ -52,8 +52,8 @@
                     "filename" : "flash_player_sa_linux.x86_64.tar.gz",
                     "only-arches": ["x86_64"],
                     "url" : "https://fpdownload.macromedia.com/pub/flashplayer/updaters/32/flash_player_sa_linux.x86_64.tar.gz",
-                    "sha256" : "907814f6a7bf42f514b9c953f7a3b9adfd35c12baf7b968be0bc94fba4f2b100",
-                    "size" : 8509899
+                    "sha256" : "c0836e94058fa1640888619e5122ed7b0dbaefe72244b18aec5b2b29622fa92a",
+                    "size" : 8509530
                 },
                 {
                     "type" : "file",
