@@ -66,7 +66,13 @@
                     "only-arches": ["x86_64"],
                     "url" : "https://fpdownload.macromedia.com/pub/flashplayer/updaters/32/flash_player_sa_linux.x86_64.tar.gz",
                     "sha256" : "c8c4d7f27812c06180e35708efe225e8655f8e91dd9c6223a2d741d639d145d1",
-                    "size" : 8509884
+                    "size" : 8509884,
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://www.adobe.com/support/flashplayer/debug_downloads.html",
+                        "version-pattern": "The latest versions are <span>([\\d\\.-]*)<\\/span>",
+                        "url-pattern": "(https:\\/\\/fpdownload\\.macromedia\\.com\\/pub\\/flashplayer\\/updaters\\/\\d+\\/flash_player_sa_linux\\.x86_64\\.tar\\.gz)"
+                    }
                 },
                 {
                     "type" : "file",
