@@ -61,12 +61,14 @@
                    "path" : "directories.h"
                 },
                 {
-                    "type" : "extra-data",
-                    "filename" : "flash_player_sa_linux.x86_64.tar.gz",
-                    "only-arches": ["x86_64"],
-                    "url" : "https://fpdownload.macromedia.com/pub/flashplayer/updaters/32/flash_player_sa_linux.x86_64.tar.gz",
-                    "sha256" : "f1fbdb9bd0f7235d6f6b6d589ad7be4eb1c230a357cfc27adf5d4712fdaf5b47",
-                    "size" : 8693594,
+                    "type": "extra-data",
+                    "filename": "flash_player_sa_linux.x86_64.tar.gz",
+                    "only-arches": [
+                        "x86_64"
+                    ],
+                    "url": "https://fpdownload.macromedia.com/pub/flashplayer/updaters/32/flash_player_sa_linux.x86_64.tar.gz",
+                    "sha256": "4db0215c499709fa446bd1c2b92eb8f047630fa28f2103436bf5c36ff67b2356",
+                    "size": 8692950,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://www.adobe.com/support/flashplayer/debug_downloads.html",
