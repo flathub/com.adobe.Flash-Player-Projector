@@ -66,8 +66,8 @@
                         "x86_64"
                     ],
                     "url": "https://fpdownload.macromedia.com/pub/flashplayer/updaters/32/flash_player_sa_linux.x86_64.tar.gz",
-                    "sha256": "24afc405025823f1df28314625347101829b4ba73e86c091585baacda11bab5f",
-                    "size": 8514114,
+                    "sha256": "35a04306b46083c0ecfcb09e7c13ba058c958da6ef206c588bdb1f1dab129cf9",
+                    "size": 8514490,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://www.adobe.com/support/flashplayer/debug_downloads.html",
