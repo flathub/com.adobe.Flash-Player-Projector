@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="mnemonic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 240 240" enable-background="new 0 0 240 240" xml:space="preserve">
+  <g>
+    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="120.0002" y1="-7.9937" x2="120.0002" y2="250.7279">
+      <stop  offset="0" style="stop-color:#4E0000"/>
+      <stop  offset="1" style="stop-color:#440100"/>
+    </linearGradient>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_1_)" d="M-10,-10v250h250V0H0z"/>
+  </g>
+  <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="120.0002" y1="49.0502" x2="120.0002" y2="184.9502">
+    <stop  offset="0" style="stop-color:#FFFFFF"/>
+    <stop  offset="1" style="stop-color:#E8E8E8"/>
+  </linearGradient>
+  <g transform="translate(0, 3)">
+    <path fill="url(#SVGID_2_)" d="M176.5,49.1c-20.1,0-36.3,7.5-48.4,22.1c-9.7,11.9-16,26.7-21.5,41C95.3,141.3,87.7,158,63.5,158v27	c20.1,0,36.3-7,48.4-21.7c7.7-9.4,13.3-21.3,17.9-32.8h31.7v-27h-20.8c8.2-17.5,17.3-27,35.8-27V49.1z"/>
+  </g>
+</svg>
