@@ -1,0 +1,43 @@
+From 45325fc3800d33276855a7f1aa07308d1b9735f7 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 31 Oct 2022 12:42:43 +0100
+Subject: [PATCH] Work-around crasher when closing a window
+
+See glib patch
+---
+ gtk/gtkwidget.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/gtk/gtkwidget.c b/gtk/gtkwidget.c
+index 1d1f6bb60e..c9fc84792c 100644
+--- a/gtk/gtkwidget.c
++++ b/gtk/gtkwidget.c
+@@ -54,6 +54,7 @@
+ #include "gtkbuildable.h"
+ #include "gtkbuilderprivate.h"
+ #include "gtkalias.h"
++#include "gtkmenubar.h"
+ 
+ /**
+  * SECTION:gtkwidget
+@@ -3155,6 +3156,8 @@ gtk_widget_unparent (GtkWidget *widget)
+   g_object_unref (widget);
+ }
+ 
++void g_set_crash_workaround(gpointer p);
++
+ /**
+  * gtk_widget_destroy:
+  * @widget: a #GtkWidget
+@@ -3179,6 +3182,8 @@ gtk_widget_destroy (GtkWidget *widget)
+ {
+   g_return_if_fail (GTK_IS_WIDGET (widget));
+ 
++  if (GTK_IS_MENU_BAR (widget))
++    g_set_crash_workaround(widget);
+   gtk_object_destroy ((GtkObject*) widget);
+ }
+ 
+-- 
+2.37.3
+

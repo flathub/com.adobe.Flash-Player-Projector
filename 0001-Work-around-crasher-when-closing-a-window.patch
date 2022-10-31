@@ -1,0 +1,55 @@
+From 2a04938948fdafc3e08b4ea026e12fbc0ad1fa5b Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 31 Oct 2022 12:38:14 +0100
+Subject: [PATCH] Work-around crasher when closing a window
+
+Flash is an abandoned proprietary application, and more recent versions
+of glib make it crash when older versions just threw warnings. Those
+warnings were legitimate, but we can't easily patch the application
+without side-effects, so work-around the problems in glib and gtk instead.
+
+The crash is due to g_signal_handlers_disconnect_matched() being called
+on a destroyed widget. Keep track of that widget from GTK so we can
+avoid manipulating the freed memory when the function is called.
+
+(flashplayer:2): GLib-GObject-WARNING **: instance with invalid (NULL) class pointer
+(flashplayer:2): GLib-GObject-CRITICAL **: g_signal_handlers_disconnect_matched: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+With help from Colin Kinloch <colin.kinloch@collabora.com>
+---
+ gobject/gsignal.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+diff --git a/gobject/gsignal.c b/gobject/gsignal.c
+index 32453bc51..4ff3486fb 100644
+--- a/gobject/gsignal.c
++++ b/gobject/gsignal.c
+@@ -3025,6 +3025,13 @@ g_signal_handlers_unblock_matched (gpointer         instance,
+   return n_handlers;
+ }
+ 
++static gpointer crash_workaround = NULL;
++GLIB_AVAILABLE_IN_ALL void g_set_crash_workaround(gpointer p);
++void g_set_crash_workaround(gpointer p)
++{
++  crash_workaround = p;
++}
++
+ /**
+  * g_signal_handlers_disconnect_matched:
+  * @instance: (type GObject.Object): The instance to remove handlers from.
+@@ -3057,6 +3064,11 @@ g_signal_handlers_disconnect_matched (gpointer         instance,
+ 				      gpointer         data)
+ {
+   guint n_handlers = 0;
++
++  if (instance == crash_workaround) {
++    crash_workaround = NULL;
++    return n_handlers;
++  }
+   
+   g_return_val_if_fail (G_TYPE_CHECK_INSTANCE (instance), 0);
+   g_return_val_if_fail ((mask & ~G_SIGNAL_MATCH_MASK) == 0, 0);
+-- 
+2.37.3
+
