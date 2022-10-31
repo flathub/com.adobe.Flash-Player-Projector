@@ -1,7 +1,7 @@
 {
     "app-id": "com.adobe.Flash-Player-Projector",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "flashplayer",
     "tags": [
@@ -16,6 +16,24 @@
         "--filesystem=xdg-run/gvfs:ro"
     ],
     "modules": [
+        {
+            "name": "glib",
+            "buildsystem": "meson",
+            "config-opts": [
+              "-Dselinux=disabled"
+            ],
+            "sources": [
+              {
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/glib.git",
+                "tag": "2.72.3"
+              },
+              {
+                "type": "patch",
+                "path": "gsignal_pointer_check.patch"
+              }
+            ]
+        },
         "shared-modules/gtk2/gtk2.json",
         {
             "name": "flashplayer",

@@ -1,0 +1,13 @@
+diff --git a/gobject/gsignal.c b/gobject/gsignal.c
+index 6fee8ec3f..0ca244a4a 100644
+--- a/gobject/gsignal.c
++++ b/gobject/gsignal.c
+@@ -3058,6 +3058,8 @@ g_signal_handlers_disconnect_matched (gpointer         instance,
+ {
+   guint n_handlers = 0;
+   
++  if (((GTypeInstance*) instance)->g_class == 0xaaaaaaaaaaaaaaaa)
++    return 0;
+   g_return_val_if_fail (G_TYPE_CHECK_INSTANCE (instance), 0);
+   g_return_val_if_fail ((mask & ~G_SIGNAL_MATCH_MASK) == 0, 0);
+   
