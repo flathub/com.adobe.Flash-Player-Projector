@@ -11,9 +11,13 @@
   <content_rating type="oars-1.1"/>
   <description>
     <p>
-      The Adobe Flash Player Projector is a player for content created on the Adobe Flash platform.
+      The Adobe Flash Player Projector is an offline player for content created on the Adobe Flash platform.
     </p>
-    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Adobe.</p>
+    <p>
+      While the Flash platform is abandoned, there's still <a href="https://archive.org/details/softwarelibrary_flash">a lot of vintage
+      content available for download</a>, such as games, and animations from Flash's “Golden Age”.
+    </p>
+    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Adobe, and does not contain a web browser plug-in.</p>
   </description>
   <url type="homepage">https://www.adobe.com/support/flashplayer/debug_downloads.html</url>
   <screenshots>
