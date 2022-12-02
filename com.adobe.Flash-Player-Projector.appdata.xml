@@ -18,12 +18,6 @@
   <url type="homepage">https://www.adobe.com/support/flashplayer/debug_downloads.html</url>
   <screenshots>
     <screenshot type="default">
-      <caption>Main Window</caption>
-      <image width="640" height="483">
-        https://raw.githubusercontent.com/flathub/com.adobe.Flash-Player-Projector/master/screenshots/flash-1.png
-      </image>
-    </screenshot>
-    <screenshot>
       <caption>Playing “Samorost 2”</caption>
       <image width="850" height="677">
         https://raw.githubusercontent.com/flathub/com.adobe.Flash-Player-Projector/master/screenshots/flash-2.png
