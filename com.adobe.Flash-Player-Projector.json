@@ -16,28 +16,7 @@
         "--filesystem=xdg-run/gvfs:ro"
     ],
     "modules": [
-        {
-          "name": "glib",
-          "buildsystem": "meson",
-          "config-opts": [
-              "-Dtests=false"
-          ],
-          "x-cpe": {
-            "product": "glib"
-          },
-          "sources": [
-            {
-              "type": "archive",
-              "url": "https://download.gnome.org/sources/glib/2.74/glib-2.74.1.tar.xz",
-              "sha256": "0ab981618d1db47845e56417b0d7c123f81a3427b2b9c93f5a46ff5bbb964964"
-            },
-            {
-              "type": "patch",
-              "path": "0001-Work-around-crasher-when-closing-a-window.patch"
-            }
-          ]
-        },
-        "gtk2/gtk2.json",
+        "shared-modules/gtk2/gtk2.json",
         {
             "name": "flashplayer",
             "buildsystem": "simple",
@@ -54,7 +33,7 @@
                     "type": "script",
                     "dest-filename": "flashplayer",
                     "commands": [
-                        "LD_PRELOAD=/app/lib/libfix-config-location.so exec /app/extra/flashplayer \"$@\""
+                        "LD_PRELOAD=\"/app/lib/libfix-config-location.so /app/lib/libfix-gtk.so\" exec /app/extra/flashplayer \"$@\""
                     ]
                 },
                 {
@@ -68,6 +47,10 @@
                 {
                     "type": "file",
                     "path": "Makefile"
+                },
+                {
+                    "type": "file",
+                    "path": "fix-gtk.c"
                 },
                 {
                     "type": "file",
