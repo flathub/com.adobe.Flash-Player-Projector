@@ -20,6 +20,7 @@
     <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Adobe, and does not contain a web browser plug-in.</p>
   </description>
   <url type="homepage">https://www.adobe.com/support/flashplayer/debug_downloads.html</url>
+  <url type="help">https://archive.org/details/softwarelibrary_flash</url>
   <screenshots>
     <screenshot type="default">
       <caption>Playing “Samorost 2”</caption>
