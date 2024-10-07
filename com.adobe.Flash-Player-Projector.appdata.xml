@@ -5,6 +5,9 @@
   <name>Adobe Flash Player</name>
   <summary>Player for content created using Adobe Flash</summary>
   <metadata_license>CC0-1.0</metadata_license>
+  <developer id="com.adobe">
+      <name>Adobe</name>
+  </developer>
   <!-- license linked from https://www.adobe.com/legal/licenses-terms.html -->
   <project_license>LicenseRef-proprietary=https://wwwimages2.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_30_0.pdf</project_license>
   <launchable type="desktop-id">com.adobe.Flash-Player-Projector.desktop</launchable>
