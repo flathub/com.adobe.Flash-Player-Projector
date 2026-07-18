@@ -13,7 +13,6 @@
   <launchable type="desktop-id">com.adobe.Flash-Player-Projector.desktop</launchable>
   <content_rating type="oars-1.1"/>
   <description>
-    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Adobe, and does not contain a web browser plug-in.**</p>
     <p>
       The Adobe Flash Player Projector is an offline player for content created on the Adobe Flash platform.
     </p>
