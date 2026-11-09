@@ -20,6 +20,10 @@
       While the Flash platform is abandoned, there's still a lot of vintage
       content available for download, such as games, and animations from Flash's “Golden Age”.
     </p>
+    <p>
+      It is recommended that you test modern Flash emulator Ruffle first, available on Flathub,
+      before trying out the obsolete and unmaintained Adobe Flash Player.
+    </p>
   </description>
   <url type="homepage">https://www.adobe.com/products/flashplayer/end-of-life-alternative.html</url>
   <url type="help">https://archive.org/details/softwarelibrary_flash</url>
